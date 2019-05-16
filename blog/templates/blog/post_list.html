@@ -1,8 +1,17 @@
 <html>
-  <head>
-    <title>Lunatic Fringe</title>
-  </head>
-  <body>
-    <p>Well helllooooooo</p>
-  </body>
+    <head>
+        <title>Lunatic Fringe</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Lunatic Fringe</a></h1>
+        </div>
+        {% for post in posts %}
+            <div>
+              <p>published: {{ post.published_date }}</p>
+              <h2><a href="">{{ post.title }}</a></h2>
+              <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    </body>
 </html>
